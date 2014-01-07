@@ -21,6 +21,8 @@
         [segment setAttributedTitle:[configuration title]
                            forState:UIControlStateNormal];
         
+        [segment setContentEdgeInsets:UIEdgeInsetsMake(6.0, 6.0, 6.0, 6.0)];
+        
         NSAttributedString *selectedTitle = [configuration selectedTitle];
         if ( selectedTitle != nil ) {
             
@@ -143,7 +145,7 @@
         
     } else {
         
-        [[[self tintColor] colorWithAlphaComponent:.5] setFill];
+        [[[self tintColor] colorWithAlphaComponent:.15] setFill];
         
     }
     
@@ -157,5 +159,31 @@
     }
     
 }
+
+- (void)setEnabled:(BOOL)enabled
+{
+    
+    [super setEnabled:enabled];
+    
+    if ( enabled ) {
+        
+        [[self divider] setBackgroundColor:[self tintColor]];
+        
+    } else {
+        
+        [[self divider] setBackgroundColor:[[self tintColor] colorWithAlphaComponent:.5]];
+        
+    }
+    
+}
+
+- (void)setHighlighted:(BOOL)highlighted
+{
+    
+	[super setHighlighted:highlighted];
+	[self setNeedsDisplay];
+    
+}
+
 
 @end
