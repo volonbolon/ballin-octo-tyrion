@@ -20,6 +20,8 @@
  */
 @property (assign, nonatomic) UISegmentedControlSegment controlSegment;
 
+@property (nonatomic, strong) UIColor *dividerColor;
+
 /**
  Factory method that returns an instance of `VBSegmentConfiguration` configured according to the information in `VBSegmentConfiguration`
  @param configuration An `VBSegmentConfiguration` instance that enclose all the relevant information (`title`, `selectedTitle`, `tintColor`) to draw the control. 

@@ -303,4 +303,17 @@
     
 }
 
+- (void)setTintColor:(UIColor *)tintColor
+{
+    
+    [super setTintColor:tintColor];
+    
+    for ( VBSegment *segment in [self segments] ) {
+        
+        [segment setDividerColor:tintColor];
+        
+    }
+    
+}
+
 @end

@@ -73,7 +73,6 @@
         [segment addConstraint:bottomContraint];
         
         UIColor *tintColor = [configuration tintColor];
-        [divider setBackgroundColor:tintColor];
         
         [segment setDivider:divider];
         
@@ -185,5 +184,11 @@
     
 }
 
+- (void)setDividerColor:(UIColor *)dividerColor
+{
+    
+    [[self divider] setBackgroundColor:dividerColor];
+    
+}
 
 @end
