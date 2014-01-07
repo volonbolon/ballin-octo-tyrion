@@ -21,6 +21,9 @@
 		B093CB2D187B6B8200E7A703 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B093CB0F187B6B8200E7A703 /* UIKit.framework */; };
 		B093CB35187B6B8200E7A703 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B093CB33187B6B8200E7A703 /* InfoPlist.strings */; };
 		B093CB37187B6B8200E7A703 /* BallinOctoTyrionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B093CB36187B6B8200E7A703 /* BallinOctoTyrionTests.m */; };
+		B093CB43187B6D4000E7A703 /* VBSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B093CB42187B6D4000E7A703 /* VBSegmentedControl.m */; };
+		B093CB47187B713F00E7A703 /* VBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = B093CB46187B713F00E7A703 /* VBSegment.m */; };
+		B093CB4B187B811C00E7A703 /* VBSegmentConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = B093CB4A187B811C00E7A703 /* VBSegmentConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,14 @@
 		B093CB32187B6B8200E7A703 /* BallinOctoTyrionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BallinOctoTyrionTests-Info.plist"; sourceTree = "<group>"; };
 		B093CB34187B6B8200E7A703 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B093CB36187B6B8200E7A703 /* BallinOctoTyrionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BallinOctoTyrionTests.m; sourceTree = "<group>"; };
+		B093CB41187B6D4000E7A703 /* VBSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBSegmentedControl.h; sourceTree = "<group>"; };
+		B093CB42187B6D4000E7A703 /* VBSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBSegmentedControl.m; sourceTree = "<group>"; };
+		B093CB44187B6E7400E7A703 /* VBSegmentedControl_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBSegmentedControl_Private.h; sourceTree = "<group>"; };
+		B093CB45187B713F00E7A703 /* VBSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBSegment.h; sourceTree = "<group>"; };
+		B093CB46187B713F00E7A703 /* VBSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBSegment.m; sourceTree = "<group>"; };
+		B093CB48187B733500E7A703 /* VBSegment_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBSegment_Private.h; sourceTree = "<group>"; };
+		B093CB49187B811C00E7A703 /* VBSegmentConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBSegmentConfiguration.h; sourceTree = "<group>"; };
+		B093CB4A187B811C00E7A703 /* VBSegmentConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBSegmentConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +123,7 @@
 		B093CB11187B6B8200E7A703 /* BallinOctoTyrion */ = {
 			isa = PBXGroup;
 			children = (
+				B093CB40187B6C5100E7A703 /* Segmented Control */,
 				B093CB1A187B6B8200E7A703 /* VBAppDelegate.h */,
 				B093CB1B187B6B8200E7A703 /* VBAppDelegate.m */,
 				B093CB1D187B6B8200E7A703 /* Main.storyboard */,
@@ -150,6 +162,21 @@
 				B093CB33187B6B8200E7A703 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B093CB40187B6C5100E7A703 /* Segmented Control */ = {
+			isa = PBXGroup;
+			children = (
+				B093CB41187B6D4000E7A703 /* VBSegmentedControl.h */,
+				B093CB42187B6D4000E7A703 /* VBSegmentedControl.m */,
+				B093CB44187B6E7400E7A703 /* VBSegmentedControl_Private.h */,
+				B093CB45187B713F00E7A703 /* VBSegment.h */,
+				B093CB46187B713F00E7A703 /* VBSegment.m */,
+				B093CB48187B733500E7A703 /* VBSegment_Private.h */,
+				B093CB49187B811C00E7A703 /* VBSegmentConfiguration.h */,
+				B093CB4A187B811C00E7A703 /* VBSegmentConfiguration.m */,
+			);
+			name = "Segmented Control";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B093CB4B187B811C00E7A703 /* VBSegmentConfiguration.m in Sources */,
+				B093CB43187B6D4000E7A703 /* VBSegmentedControl.m in Sources */,
 				B093CB1C187B6B8200E7A703 /* VBAppDelegate.m in Sources */,
 				B093CB22187B6B8200E7A703 /* VBViewController.m in Sources */,
+				B093CB47187B713F00E7A703 /* VBSegment.m in Sources */,
 				B093CB18187B6B8200E7A703 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
