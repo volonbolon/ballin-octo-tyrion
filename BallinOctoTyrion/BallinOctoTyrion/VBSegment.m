@@ -159,23 +159,6 @@
     
 }
 
-- (void)setEnabled:(BOOL)enabled
-{
-    
-    [super setEnabled:enabled];
-    
-    if ( enabled ) {
-        
-        [[self divider] setBackgroundColor:[self tintColor]];
-        
-    } else {
-        
-        [[self divider] setBackgroundColor:[[self tintColor] colorWithAlphaComponent:.5]];
-        
-    }
-    
-}
-
 - (void)setHighlighted:(BOOL)highlighted
 {
     
@@ -184,10 +167,29 @@
     
 }
 
-- (void)setDividerColor:(UIColor *)dividerColor
+- (void)setEnabled:(BOOL)enabled
 {
     
-    [[self divider] setBackgroundColor:dividerColor];
+    [super setEnabled:enabled];
+    
+    UIColor *dividerColor = [[self divider] backgroundColor];
+    
+    if ( enabled ) {
+        
+        [[self divider] setBackgroundColor:dividerColor];
+        
+    } else {
+        
+        [[self divider] setBackgroundColor:[dividerColor colorWithAlphaComponent:.5]];
+        
+    }
+    
+}
+
+- (void)setSegmentedControlTintColor:(UIColor *)segmentedControlTintColor
+{
+    
+    [[self divider] setBackgroundColor:segmentedControlTintColor];
     
 }
 

@@ -20,7 +20,7 @@
  */
 @property (assign, nonatomic) UISegmentedControlSegment controlSegment;
 
-@property (nonatomic, strong) UIColor *dividerColor;
+@property (nonatomic, strong) UIColor *segmentedControlTintColor;
 
 /**
  Factory method that returns an instance of `VBSegmentConfiguration` configured according to the information in `VBSegmentConfiguration`
